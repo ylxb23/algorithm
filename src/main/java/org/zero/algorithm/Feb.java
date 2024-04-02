@@ -20,7 +20,7 @@ public class Feb {
         if(n == 1) {
             return 1;
         }
-        if(n == 2) {
+        if(n == NUM) {
             return 2;
         }
         int res1 = 1, res2 = 2;
@@ -32,7 +32,7 @@ public class Feb {
         }
         return res;
     }
-
+    static final int NUM = 2;
     /**
      * 递归方式
      * @param i
@@ -42,7 +42,7 @@ public class Feb {
         if(i == 1) {
             return 1;
         }
-        if(i == 2) {
+        if(i == NUM) {
             return 2;
         }
         return feb(i-1) + feb(i - 2);

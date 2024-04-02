@@ -2,8 +2,11 @@ package org.zero.algorithm;
 
 /**
  * 链表和反转
+ * @author ylxb2
+ * @date 2023/07/05
  */
 public class Link {
+    private String _name;
 
     public static class Node {
         int val;
@@ -28,17 +31,17 @@ public class Link {
 
     /**
      * 构建链表
-     * @param list
+     * @param arr
      * @return
      */
-    static Node buildLink(int[] list) {
-        if(list == null) {
+    static Node buildLink(int[] arr) {
+        if(arr == null) {
             return new Node();
         }
-        Node head = new Node(list[0], null);
+        Node head = new Node(arr[0], null);
         Node next = head;
-        for(int i=1; i<list.length; i++) {
-            next.next = new Node(list[i], null);
+        for(int i=1; i<arr.length; i++) {
+            next.next = new Node(arr[i], null);
             next = next.next;
         }
         return head;
@@ -120,44 +123,45 @@ public class Link {
     }
 
     public static void main(String[] args) {
-//        Node link = buildLink(new int[]{1,2,3,4,5,6,7,8,9});
-//        link.print();
-//        Node rlink = reverse(link);
-//        System.out.print("After reverse, ");
-//        rlink.print();
-//        Node rrlink = reverse4NewBuild(rlink);
-//        System.out.print("After reverse twice, ");
-//        rrlink.print();
+        long bigValue = 99999L;
+        Node link = buildLink(new int[]{1,2,3,4,5,6,7,8,9});
+        link.print();
+        Node rlink = reverse(link);
+        System.out.print("After reverse, ");
+        rlink.print();
+        Node rrlink = reverse4NewBuild(rlink);
+        System.out.print("After reverse twice, ");
+        rrlink.print();
 
-        int step = 1;
+        int step = 2;
         Node linkM = buildLink(new int[]{1,2,3});
         Node rM = reverseByStep(linkM, step);
-        System.out.print("After reverse by step, ");
+        System.out.print("After reverse by step(" + step + "), ");
         rM.print();
 
         linkM = buildLink(new int[]{1,2,3,4});
         rM = reverseByStep(linkM, step);
-        System.out.print("After reverse by step, ");
+        System.out.print("After reverse by step(" + step + "), ");
         rM.print();
 
         linkM = buildLink(new int[]{1,2,3,4,5});
         rM = reverseByStep(linkM, step);
-        System.out.print("After reverse by step, ");
+        System.out.print("After reverse by step(" + step + "), ");
         rM.print();
 
         linkM = buildLink(new int[]{1,2,3,4,5,6});
         rM = reverseByStep(linkM, step);
-        System.out.print("After reverse by step, ");
+        System.out.print("After reverse by step(" + step + "), ");
         rM.print();
 
         linkM = buildLink(new int[]{1,2,3,4,5,6,7});
         rM = reverseByStep(linkM, step);
-        System.out.print("After reverse by step, ");
+        System.out.print("After reverse by step(" + step + "), ");
         rM.print();
 
         linkM = buildLink(new int[]{1,2,3,4,5,6,7,8});
         rM = reverseByStep(linkM, step);
-        System.out.print("After reverse by step, ");
+        System.out.print("After reverse by step(" + step + "), ");
         rM.print();
     }
 }
