@@ -2,6 +2,9 @@ package org.zero.algorithm;
 
 import java.util.StringJoiner;
 
+/**
+ * 给出一个正整数，求正整数位数上为1的个数
+ */
 public class Bit1Count {
 
     public static void main(String[] args) {

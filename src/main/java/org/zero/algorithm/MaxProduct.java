@@ -27,16 +27,10 @@ public class MaxProduct {
     }
 
     private static int max(int a, int b) {
-        if(a > b) {
-            return a;
-        }
-        return b;
+        return Math.max(a, b);
     }
 
     private static int min(int a, int b) {
-        if(a < b) {
-            return a;
-        }
-        return b;
+        return Math.min(a, b);
     }
 }
